@@ -54,7 +54,7 @@ class UserAdmin(BaseUserAdmin):
         # 기본 정보
         (None, {"fields": ["username", "password"]}),
         # 개인 정보 : Personal info
-        ("Personal info", {"fields": ["email", "name", "age", "introduction"]}),
+        ("Personal info", {"fields": ["email", "name", "age", "introduction", "followings"]}),
         ("Permissions", {"fields": ["is_admin"]}),
     ]
     
@@ -74,3 +74,4 @@ class UserAdmin(BaseUserAdmin):
 
 admin.site.register(User, UserAdmin)
 admin.site.unregister(Group)
+
