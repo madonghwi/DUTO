@@ -20,7 +20,7 @@ DRF를 이용한 커뮤니티 사이트
 ## 🔑 프로젝트 설치 및 실행 방법
 #### 깃허브 클론하기
 - git init
-- git clone <레파지토리 주소>
+- git clone git@github.com:goodminjeong/AI-5_A4_DUTO_Backend.git
 #### 패키지 밎 라이브러리 설치
 - pip install -r requirements.txt
 #### DB 연동
