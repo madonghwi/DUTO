@@ -19,11 +19,11 @@ DRF를 이용한 커뮤니티 사이트
 
 ### ⚙️ 개발 환경
 - `Python 3.11`
-- **IDE** : visual studio code, pycharm
-- **Framework** : Django-Rest-Framework
-- **Workbench** : MySQL Workbench 8.0 CE
-- **Database** : Mysql DB(6.4.5)
-- 그외 : **requirements.txt** : requirements.txt 참조
+- **IDE** : `visual studio code`, `pycharm`
+- **Framework** : `Django-Rest-Framework`
+- **Workbench** : `MySQL Workbench 8.0 CE`
+- **Database** : `Mysql DB(6.4.5)`
+- 그외 : **requirements.txt** : `requirements.txt` 참조
 - **FRONT-END** : https://github.com/goodminjeong/AI-5_A4_DUTO_Frontend 실행화면은 frontend repository에 있음
 
 ### 🔑 프로젝트 설치 및 실행 방법
