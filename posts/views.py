@@ -34,8 +34,7 @@ class CategoryFollowView(APIView):
 
 class PostView(APIView):
     def get(self, request):
-        """메인 페이지"""
-        
+        """메인 페이지"""        
         posts = Post.objects.all().order_by("-created_at")[:12]
         serializer = PostListSerializer(posts, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
@@ -53,8 +52,7 @@ class PostView(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
         
-class PostDetailView(APIView):
-    
+class PostDetailView(APIView):    
     def get(self, request, post_id):
         """게시글 상세페이지 조회"""
         post = get_object_or_404(Post, id=post_id)
@@ -90,13 +88,12 @@ class PostLikesView(APIView):
         post = get_object_or_404(Post, id=post_id)
         if request.user in post.like.all():
             post.like.remove(request.user)
-            return Response("좋아요 취소", status=status.HTTP_200_OK)
+            return Response("dislike", status=status.HTTP_200_OK)
         else:
             post.like.add(request.user)
-            return Response("좋아요", status=status.HTTP_200_OK)
+            return Response("like", status=status.HTTP_200_OK)
         
         
-
 class CommentsView(APIView):
     def get(self, request, post_id):
         """댓글 보기"""
@@ -116,7 +113,7 @@ class CommentsView(APIView):
         
         
 class CommentsDetailView(APIView):
-    def put(self, request, post_id, comment_id):
+    def put(self, request, comment_id):
         """댓글 수정"""
         comment = get_object_or_404(Comment, id=comment_id)
         if request.user == comment.user:        
@@ -129,7 +126,7 @@ class CommentsDetailView(APIView):
         else:
             return Response('권한이 없습니다!', status=status.HTTP_403_FORBIDDEN)    
 
-    def delete(self, request, post_id, comment_id):
+    def delete(self, request, comment_id):
         """댓글 삭제"""
         comment = get_object_or_404(Comment, id=comment_id)
         if request.user == comment.user:
