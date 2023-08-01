@@ -17,32 +17,41 @@ DRF를 이용한 커뮤니티 사이트
 - 팀원😄3 : <a href="http://allitail.tistory.com/">원윤희</a> - 게시글 등록, 조회, 수정, 삭제, 좋아요
 - 팀원😄4 : <a href="https://woongpang.tistory.com/">이기웅</a> - 댓글 등록, 조회, 수정, 삭제
 
-## 🔑 프로젝트 설치 및 실행 방법
+### ⚙️ 개발 환경
+- `Python 3.11`
+- **IDE** : `visual studio code`, `pycharm`
+- **Framework** : `Django-Rest-Framework`
+- **Workbench** : `MySQL Workbench 8.0 CE`
+- **Database** : `Mysql DB(6.4.5)`
+- 그외 : **requirements.txt** : `requirements.txt`
+- **FRONT-END** : https://github.com/goodminjeong/AI-5_A4_DUTO_Frontend 실행화면은 frontend repository에 있음
+
+### 🔑 프로젝트 설치 및 실행 방법
 #### 깃허브 클론하기
-- git init
-- git clone <레파지토리 주소>
+```
+$ git init
+$ git clone git@github.com:goodminjeong/AI-5_A4_DUTO_Backend.git
+```
 #### 패키지 밎 라이브러리 설치
-- pip install -r requirements.txt
+```
+$ pip install -r requirements.txt
+```
 #### DB 연동
-- python manage.py makemigrations
-- python manage.py migrate
+```
+$ python manage.py makemigrations
+$ python manage.py migrate
+```
 #### 카테고리 초기 데이터 설정
-- python manage.py loaddata category_data
+```
+$ python manage.py loaddata category_data
+```
 #### 백엔드 서버 실행
-- python manage.py runserver
+```
+$ python manage.py runserver
+```
 #### 프론트엔드 라이브서버 실행
 - vscode 확장팩 <Live Server> 설치
 - index.html에서 마우스 우클릭 후 Open with Live Server 클릭(단축키 Alt+L+O)
-
-### ⚙️ 개발 환경
-- `Python 3.11`
-- **IDE** : visual studio code, pycharm
-- **Framework** : Django-Rest-Framework
-- **Workbench** : MySQL Workbench 8.0 CE
-- **Database** : Mysql DB(6.4.5)
-- 그외 : **requirements.txt** : https://github.com/madonghwi/DUTO/blob/main/requirements.txt 참조
-- **FRONT-END** : https://github.com/madonghwi/front
-
 
 ## 📌 주요 기능
 #### 로그인 
